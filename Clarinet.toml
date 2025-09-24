@@ -1,0 +1,23 @@
+[project]
+name = 'carbon-credit-marketplace'
+description = 'Decentralized Carbon Credit Marketplace - Transparent trading platform for verified carbon credits'
+authors = []
+telemetry = true
+cache_dir = '.clarinet/cache'
+requirements = []
+[contracts.carbon-marketplace]
+path = 'contracts/carbon-marketplace.clar'
+clarity_version = 3
+epoch = 3.1
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+[repl.remote_data]
+enabled = false
+api_url = 'https://api.hiro.so'
